@@ -2,7 +2,9 @@ import Ember from 'ember';
 import MappingMixin from '../../../mixins/mapping';
 import { module, test } from 'qunit';
 
-module('MappingMixin');
+module('MappingMixin', {
+  needs: ['service:geolocation']
+});
 
 test('foo', function(assert) {
   var MappingObject = Ember.Object.extend(MappingMixin);
